@@ -21,8 +21,9 @@ jobs:
           distribution: temurin
           java-version: 21
 
-      # Android SDK (platform 37 / build-tools) is auto-installed by AGP when licenses are accepted.
-      - uses: android-actions/setup-android@v3
+      # The runner image ships the Android SDK; accepting licenses lets AGP download platform 37.
+      - name: Accept Android SDK licenses
+        run: yes | "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" --licenses > /dev/null || true
 
       - uses: gradle/actions/setup-gradle@v4
 
