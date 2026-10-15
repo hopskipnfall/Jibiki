@@ -34,7 +34,8 @@ jobs:
         run: ./gradlew :androidApp:assembleDebug --console=plain
 
       - name: Web production bundle
-        run: ./gradlew :webApp:wasmJsBrowserDistribution --console=plain
+        run: |
+          ./gradlew :webApp:wasmJsBrowserDistribution --console=plain --info > /tmp/web.log 2>&1 || { grep -n -A30 'Task :kotlinWasmNpmInstall' /tmp/web.log | cut -c1-240 | head -80; ls build/wasm build/wasm/node_modules | head -30; exit 1; }
 
       - name: Upload test reports on failure
         if: failure()
