@@ -21,6 +21,8 @@ python3 -m http.server 8766 --directory webApp/build/dist/wasmJs/productionExecu
 
 Web needs WasmGC (Firefox 120+, Chrome 119+). If Gradle says the yarn lock changed, run `./gradlew kotlinWasmUpgradeYarnLock`.
 
+CI (`.github/workflows/ci.yml`) runs the unit tests and builds the APK and web bundle on every PR.
+
 ## Docs
 - [AGENTS.md](AGENTS.md) — architecture, conventions and gotchas for contributors/agents
 - [docs/superpowers/specs/2026-10-15-jibiki-design.md](docs/superpowers/specs/2026-10-15-jibiki-design.md) — PRD/design
