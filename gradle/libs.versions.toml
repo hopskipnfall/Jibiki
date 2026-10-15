@@ -1,0 +1,32 @@
+[versions]
+kotlin = "2.4.20"
+compose = "1.12.1"
+agp = "9.4.1"
+coroutines = "1.11.0"
+serialization = "1.11.0"
+androidxSqlite = "2.7.1"
+activityCompose = "1.13.0"
+kotlinxBrowser = "0.5.0"
+
+[libraries]
+kotlin-gradle-plugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
+compose-compiler-gradle-plugin = { module = "org.jetbrains.kotlin:compose-compiler-gradle-plugin", version.ref = "kotlin" }
+serialization-gradle-plugin = { module = "org.jetbrains.kotlin:kotlin-serialization", version.ref = "kotlin" }
+compose-gradle-plugin = { module = "org.jetbrains.compose:compose-gradle-plugin", version.ref = "compose" }
+android-gradle-plugin = { module = "com.android.tools.build:gradle", version.ref = "agp" }
+
+coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutines" }
+coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "coroutines" }
+serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "serialization" }
+sqlite = { module = "androidx.sqlite:sqlite", version.ref = "androidxSqlite" }
+sqlite-async = { module = "androidx.sqlite:sqlite-async", version.ref = "androidxSqlite" }
+sqlite-bundled = { module = "androidx.sqlite:sqlite-bundled", version.ref = "androidxSqlite" }
+sqlite-web = { module = "androidx.sqlite:sqlite-web", version.ref = "androidxSqlite" }
+activity-compose = { module = "androidx.activity:activity-compose", version.ref = "activityCompose" }
+kotlinx-browser = { module = "org.jetbrains.kotlinx:kotlinx-browser", version.ref = "kotlinxBrowser" }
+compose-runtime = { module = "org.jetbrains.compose.runtime:runtime", version.ref = "compose" }
+compose-foundation = { module = "org.jetbrains.compose.foundation:foundation", version.ref = "compose" }
+compose-ui = { module = "org.jetbrains.compose.ui:ui", version.ref = "compose" }
+compose-resources = { module = "org.jetbrains.compose.components:components-resources", version.ref = "compose" }
+compose-material3 = { module = "org.jetbrains.compose.material3:material3", version = "1.9.0" }
+compose-icons-core = { module = "org.jetbrains.compose.material:material-icons-core", version = "1.7.3" }
