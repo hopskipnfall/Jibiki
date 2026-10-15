@@ -1,0 +1,11 @@
+{
+  "name": "jibiki-web",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "main": "index.js",
+  "license": "GPL-3.0-or-later",
+  "dependencies": {
+    "fflate": "0.8.3"
+  }
+}

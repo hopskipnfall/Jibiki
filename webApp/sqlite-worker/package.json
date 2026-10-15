@@ -1,0 +1,8 @@
+{
+  "name": "jibiki-sqlite-worker",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "main": "worker.js",
+  "license": "GPL-3.0-or-later"
+}

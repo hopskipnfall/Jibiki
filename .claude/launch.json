@@ -1,0 +1,17 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "web-dev",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "8765", "--directory", "webApp/build/dist/wasmJs/developmentExecutable"],
+      "port": 8765
+    },
+    {
+      "name": "web",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "8766", "--directory", "webApp/build/dist/wasmJs/productionExecutable"],
+      "port": 8766
+    }
+  ]
+}
