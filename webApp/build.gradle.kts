@@ -38,11 +38,10 @@ compose.resources {
 
 // Local npm packages are copied into node_modules only on (re)install, so keep them in sync
 // with the sources before every webpack run.
-val syncLocalNpmPackages by tasks.registering(Sync::class) {
+val syncLocalNpmPackages by tasks.registering(Copy::class) {
     from(layout.projectDirectory.dir("sqlite-worker")) { into("jibiki-sqlite-worker") }
     from(layout.projectDirectory.dir("web-helpers")) { into("jibiki-web") }
     into(rootProject.layout.buildDirectory.dir("wasm/node_modules"))
-    preserve { include("**") }
     mustRunAfter(":kotlinWasmNpmInstall")
 }
 tasks.matching { it.name.startsWith("wasmJsBrowser") && (it.name.endsWith("Webpack") || it.name.endsWith("Run")) }
